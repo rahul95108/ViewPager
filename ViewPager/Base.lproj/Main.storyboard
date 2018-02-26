@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ViewPager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jiz-Id-joQ" customClass="ViewPager" customModule="ViewPager" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="615"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BPn-rI-4TU">
+                                <rect key="frame" x="0.0" y="615" width="375" height="52"/>
+                                <color key="backgroundColor" red="0.0039215686269999999" green="0.50980392159999999" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ugI-JP-wgF">
+                                <rect key="frame" x="63" y="623" width="249" height="37"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeM-Sh-BQr">
+                                <rect key="frame" x="309" y="620" width="66" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ePx-w5-ezy"/>
+                                    <constraint firstAttribute="width" constant="66" id="epp-4V-SP3"/>
+                                </constraints>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="btnNextAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JZp-az-DC4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jiz-Id-joQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="02h-vh-UCs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ugI-JP-wgF" secondAttribute="bottom" constant="7" id="11L-I0-mla"/>
+                            <constraint firstItem="Jiz-Id-joQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6XN-cl-JA4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jiz-Id-joQ" secondAttribute="bottom" constant="52" id="DhB-mC-gLr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qeM-Sh-BQr" secondAttribute="bottom" constant="3" id="FAG-7h-VC1"/>
+                            <constraint firstItem="qeM-Sh-BQr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="M02-nR-gUN"/>
+                            <constraint firstItem="BPn-rI-4TU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Nen-hx-9pE"/>
+                            <constraint firstItem="BPn-rI-4TU" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="XbW-aK-qHo"/>
+                            <constraint firstItem="ugI-JP-wgF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-63" id="bYA-d0-ZFt"/>
+                            <constraint firstItem="ugI-JP-wgF" firstAttribute="top" secondItem="Jiz-Id-joQ" secondAttribute="bottom" constant="8" id="f6w-fY-A8I"/>
+                            <constraint firstItem="Jiz-Id-joQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qNF-rS-B7t"/>
+                            <constraint firstItem="BPn-rI-4TU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uE2-eL-ErA"/>
+                            <constraint firstItem="BPn-rI-4TU" firstAttribute="top" secondItem="Jiz-Id-joQ" secondAttribute="bottom" id="vQH-uD-F3b"/>
+                            <constraint firstItem="ugI-JP-wgF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="yaS-q4-6Ma"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="ugI-JP-wgF" id="7Jw-91-vYm"/>
+                        <outlet property="viewPager" destination="Jiz-Id-joQ" id="NSn-0J-7dk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+</document>
